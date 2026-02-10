@@ -24,10 +24,11 @@ Number of people: 4
 Total Bill: 750.0 Each person pays: 187.5
 >>> ##########################################################
 >>> #Raw data
->>> bill = float(input("Total bill amount: "))
-Total bill amount: 750
->>> people_count = int(input("Number of people: "))
-Number of people: 4
->>> share = bill / people_count
->>> print("Total Bill:", bill, "Each person pays:", share)
-Total Bill: 750.0 Each person pays: 187.5
+>>>item_name = "Laptop"      
+>>>quantity = 2              
+>>>price = 499.99            
+>>>in_stock = True           
+>>>total_cost = quantity * price
+>>>print("Total Cost:", total_cost)
+>>>Item: Laptop , Qty: 2 , Price: 499.99 , Available: True
+>>>Total Cost: 999.98
