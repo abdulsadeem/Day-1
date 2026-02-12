@@ -1,15 +1,13 @@
 import pandas as pd
-
-df = pd.read_csv("customer_orders.csv")
-
-print("Before conversion:")
-print(df.dtypes)
-
-df["OrderAmount"] = pd.to_numeric(df["OrderAmount"], errors="coerce")
-df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
-
-print("\nAfter conversion:")
-print(df.dtypes)
-
-print("\nAverage Order Amount:", df["OrderAmount"].mean())
-
+data = pd.DataFrame({
+    'Price': ['$100.50', '$250.75', '$89.99'],
+    'Date': ['2026-02-01', '2026-02-05', '2026-02-10']
+})
+print("Initial Data Types:")
+print(data.dtypes)
+data['Price'] = data['Price'].str.replace('$', '', regex=False).astype(float)
+data['Date'] = pd.to_datetime(data['Date'])
+print("\nData after conversion:")
+print(data)
+print("\nData Types after conversion:")
+print(data.dtypes)
